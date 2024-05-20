@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import axios from '../../api/axios';
 import API_KEY from '../../config';
 import { MdCancel } from "react-icons/md";
+import Fetching from '../reusable/Fetching';
 
 const MovieRow = ({ title, fetchURL, isLargeRow }) => {
     const [movies, setMovies] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState('');
     const [noTrailer, setNoTrailer] = useState('');
     const [cancel, setCancel] = useState(false);
+    const [isFetching, setIsFetching] = useState(true)
+    const [error, setError] = useState(null)
     console.log(cancel);
     
     const handleCancelClick = () => {
@@ -20,15 +23,17 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
             try {
                 const request = await axios.get(fetchURL);
                 setMovies(request.data.results);
+                setIsFetching(false);
             } catch (error) {
                 if(error.response){
-                    setMovies(error.request.data)
+                    setError(error.request.data)
                     console.log(error.request.data)
                 }
                 else{
-                  setMovies(`${error.message}`)
+                  setError(`${error.message}`)
                   console.log(`${error.message}`)
                 }
+                setIsFetching(false)
             }
         };
         fetchData();
@@ -41,17 +46,31 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
             if (videos.length > 0) {
                 const trailerKey = videos[0].key; // Assuming the first video is the trailer
                 setTrailerUrl(`https://www.youtube.com/embed/${trailerKey}`);
-                setNoTrailer('');
+                // setError('');
             } else {
                 // Handle case when no trailers are available
                 setNoTrailer("Couldn't fetch the movie trailer for this data");
-                setTrailerUrl('');
+                // setTrailerUrl('');
             }
         } catch (error) {
             setNoTrailer("An error occurred while fetching the trailer.");
         }
     };
 
+    if(isFetching){
+        return (
+          <div >
+            <Fetching />
+          </div>
+        )
+      }
+      if(error){
+        return (
+          <div >
+            {error.message}
+          </div>
+        )
+      }
     const handleClose = () => {
         setTrailerUrl('');
         setNoTrailer('');

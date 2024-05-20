@@ -6,6 +6,7 @@ import { login, logout } from './features/User/UserSlice'
 import HomePage from './pages/Home/HomePage'
 import Security from './pages/Security/Security'
 import Settings from './pages/Settings/Settings'
+import NotFound from './pages/NotFound/NotFound'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -43,6 +44,7 @@ const App = () => {
             <>
               <Route path="/" element={<HomePage />} />
               <Route path='/profile' element={< Settings user={user} /> }/>
+              <Route path='*' element={<NotFound />} />
             </>
           )}
         </Routes>
