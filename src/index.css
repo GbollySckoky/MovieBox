@@ -9,6 +9,9 @@
   background-color: #111;
   color: white;
 }
+.row > h1{
+  font-size: 23px;
+}
 .row_poster{
   width: 100%;
   object-fit: contain;
@@ -236,36 +239,23 @@ max-height: 500px;
   
   .login_body > h2 {
     font-size: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     position: relative;
     font-weight: 400;
     width: 100%;
   }
   
   .login_body > h3 {
-    font-size: 1rem;
-    margin-top: 20px;
-    font-weight: 400;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 500;
   }
   
-  /* Media Queries for responsiveness */
-  @media (min-width: 600px) {
-  
-    /* .login_body > h1 {
-      font-size: 20px;
-    } */
-  
-    .login_body > h2 {
-      font-size: 1.12rem;
-    }
-  
-    
-  }
   
    /* @media (min-width: 1024px) { */
     .login_body > h1 {
       font-size: 1.3rem;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   /* }  */
    
@@ -276,7 +266,7 @@ max-height: 500px;
     max-width: 400px;
     border: none;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   @media (min-width: 768px) {
     .input > form > input {
