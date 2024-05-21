@@ -90,10 +90,10 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
                                     handleClick(movie.id);
                                 }
                             }}
-                            src={`https://image.tmdb.org/t/p/w300/${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
+                            src={`https://image.tmdb.org/t/p/w200/${isLargeRow ? movie.poster_path  : movie.backdrop_path}`}
                             alt={movie.title}
                         />
-                        <p className='movie-title'>{movie?.title || movie?.name}</p>
+                        <p className='movie-title bg-red-600'>{movie?.title || movie?.name}</p>
                     </div>
                 ))}
             </div>

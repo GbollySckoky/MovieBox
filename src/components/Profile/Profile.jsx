@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Nav from '../HomeScreen/Nav';
 import Avatar from '@mui/material/Avatar';
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import { MdKeyboardArrowRight } from "react-icons/md";
 import david from '../../assets/david.jpg'
-import { FaXTwitter } from "react-icons/fa6";
-import { IoLogoGithub } from "react-icons/io";
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
+// import { FaXTwitter } from "react-icons/fa6";
+// import { IoLogoGithub } from "react-icons/io";
+// import { FaLinkedin } from "react-icons/fa";
+// import { FaInstagram } from "react-icons/fa6";
 import Modal from './Modal';
 
 
@@ -52,7 +52,7 @@ const handleShowModal = () => {
           </div>
         </div>
         </div>
-        <div className='profile-footer'> 
+        {/* <div className='profile-footer'> 
             <div className='profile-logo'>
                 <Link to={"https://www.instagram.com/sckokyy/"} target='_blank'> 
                     <FaInstagram />
@@ -71,7 +71,7 @@ const handleShowModal = () => {
                 <p> &copy; 2024</p>
                 <Link to={'mailto:gbolahancoker99@gmail.com'} target='_blank'>gbolahancoker99@gmail.com</Link>
             </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

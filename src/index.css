@@ -9,6 +9,9 @@
   background-color: #111;
   color: white;
 }
+.row > h1{
+  font-size: 23px;
+}
 .row_poster{
   width: 100%;
   object-fit: contain;
@@ -66,6 +69,7 @@ max-height: 500px;
     margin-left: 30px;
     padding-top: 140px;
     height: 190px;
+    margin-right: 20px;
   }
   .banner_title{
     font-size: 3rem;
@@ -137,7 +141,7 @@ max-height: 500px;
     background-image: linear-gradient(
       180deg,
       transparent,
-      rgba(37, 37, 37, 0.61),
+      rgba(38, 37, 37, 0.61),
       #111
     );
   }
@@ -231,50 +235,30 @@ max-height: 500px;
     box-sizing: border-box;
   }
   
-  .login_body > h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
+
   
   .login_body > h2 {
     font-size: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     position: relative;
     font-weight: 400;
     width: 100%;
   }
   
   .login_body > h3 {
-    font-size: 1rem;
-    margin-top: 20px;
-    font-weight: 400;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 500;
   }
   
-  /* Media Queries for responsiveness */
-  @media (min-width: 600px) {
-    .login_body {
-      width: 80%;
-    }
   
-    /* .login_body > h1 {
-      font-size: 4.5rem;
-    } */
-  
-    .login_body > h2 {
-      font-size: 1.12rem;
+   /* @media (min-width: 1024px) { */
+    .login_body > h1 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
     }
-  
-    .login_body > h3 {
-      font-size: 1.1rem;
-    }
-  }
-  
-  /* @media (min-width: 1024px) {
-    .login_body {
-      width: 90%;
-    }
-  }
-   */
+  /* }  */
+   
   .input > form > input {
     outline: none;
     padding: 10px;
@@ -282,7 +266,7 @@ max-height: 500px;
     max-width: 400px;
     border: none;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   @media (min-width: 768px) {
     .input > form > input {
@@ -344,9 +328,9 @@ max-height: 500px;
   .signIn_link{
     cursor: pointer;
   }
-.profile_btn{
+/* .profile_btn{
   cursor: pointer;
-}
+} */
 .profis{
   background-color: #000;
   /* height: 100vh; */
@@ -459,7 +443,7 @@ background: red;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 50px;
   border: 0;
   background-color: white;
   padding: 10px 50px;
@@ -481,12 +465,13 @@ font-weight: 200;
 font-size: 15px;
 padding: 4px 0;
 }
-.profile_footer{
-  background-color: black;
-  /* color: #000; */
-}
 .profile-footer{
-  margin-top: 200px;
+  height: 38vh;
+  /* background-color: red;/ */
+  /* margin-top: 200px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .profile-logo{
