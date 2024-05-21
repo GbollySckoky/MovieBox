@@ -22,7 +22,7 @@ const Login = () => {
                 <>
                     <h1>Unlimited films, TV programmes and more.</h1>
                     <h2>Watch anywhere. cancel at anytime.</h2>
-                    <h3>Ready to watch? Enter your email to create or start membership</h3>
+                    <p>Ready to watch? Enter your email to create or start membership</p>
             
                     <div className='input'>
                         <form action="">

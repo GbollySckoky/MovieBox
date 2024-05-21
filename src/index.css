@@ -235,29 +235,44 @@ max-height: 500px;
     box-sizing: border-box;
   }
   
-
+  .login_body > h1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
   
   .login_body > h2 {
-    font-size: 1rem;
+    font-size: 12px;
     margin-bottom: 10px;
     position: relative;
     font-weight: 400;
     width: 100%;
   }
   
-  .login_body > h3 {
-    font-size: 13px;
+  .login_body > p {
+    font-size: 9px;
     margin-top: 5px;
-    font-weight: 500;
+    font-weight: 300;
   }
   
   
-   /* @media (min-width: 1024px) { */
+   @media (min-width: 760px) { 
     .login_body > h1 {
-      font-size: 1.3rem;
+      font-size: 27px;
       margin-bottom: 10px;
     }
-  /* }  */
+    .login_body > h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      position: relative;
+      font-weight: 400;
+      width: 100%;
+    }
+    .login_body > p {
+      font-size: 17px;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+  }  
    
   .input > form > input {
     outline: none;
