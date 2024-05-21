@@ -181,14 +181,14 @@ max-height: 500px;
     place-items: cen;
   }
   .login_img{
-    /* width: 130px; */
+    width: 130px;
     object-fit: contain;
     cursor: pointer;
     padding-left: 20px;
     position: fixed;
     left: 0;
     top: 20px;
-    height: 100vh;
+    /* height: 100vh; */
   }
   .login{
     position: relative;
