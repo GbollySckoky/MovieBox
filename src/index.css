@@ -344,9 +344,9 @@ max-height: 500px;
   .signIn_link{
     cursor: pointer;
   }
-.profile_btn{
+/* .profile_btn{
   cursor: pointer;
-}
+} */
 .profis{
   background-color: #000;
   /* height: 100vh; */
@@ -459,7 +459,7 @@ background: red;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 50px;
   border: 0;
   background-color: white;
   padding: 10px 50px;
@@ -481,12 +481,13 @@ font-weight: 200;
 font-size: 15px;
 padding: 4px 0;
 }
-.profile_footer{
-  background-color: black;
-  /* color: #000; */
-}
 .profile-footer{
-  margin-top: 200px;
+  height: 38vh;
+  /* background-color: red;/ */
+  /* margin-top: 200px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .profile-logo{
