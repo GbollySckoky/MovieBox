@@ -20,7 +20,7 @@ const Login = () => {
                 <SignIn />
             ):(
                 <>
-                    <h1>Unlimited films, TV programmes and more.</h1>
+                    <h1>Unlimited TV programmes and more.</h1>
                     <h2>Watch anywhere. cancel at anytime.</h2>
                     <p>Ready to watch? Enter your email to create or start membership</p>
             
