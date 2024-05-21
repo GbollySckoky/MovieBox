@@ -66,6 +66,7 @@ max-height: 500px;
     margin-left: 30px;
     padding-top: 140px;
     height: 190px;
+    margin-right: 20px;
   }
   .banner_title{
     font-size: 3rem;
@@ -231,10 +232,7 @@ max-height: 500px;
     box-sizing: border-box;
   }
   
-  .login_body > h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
+
   
   .login_body > h2 {
     font-size: 1rem;
@@ -252,29 +250,25 @@ max-height: 500px;
   
   /* Media Queries for responsiveness */
   @media (min-width: 600px) {
-    .login_body {
-      width: 80%;
-    }
   
     /* .login_body > h1 {
-      font-size: 4.5rem;
+      font-size: 20px;
     } */
   
     .login_body > h2 {
       font-size: 1.12rem;
     }
   
-    .login_body > h3 {
-      font-size: 1.1rem;
-    }
+    
   }
   
-  /* @media (min-width: 1024px) {
-    .login_body {
-      width: 90%;
+   /* @media (min-width: 1024px) { */
+    .login_body > h1 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
     }
-  }
-   */
+  /* }  */
+   
   .input > form > input {
     outline: none;
     padding: 10px;
