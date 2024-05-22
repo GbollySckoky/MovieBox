@@ -36,7 +36,7 @@ const handleShowModal = () => {
           <div className='profile_member'>
             <p>Member since May 2024</p>
             <div className='plan'>
-              <h3>Movie Plan</h3>
+              <p id="mis">Movie Plan</p>
               <p>Next Payment: Unlimited Subscription</p>
               <p id="yu">{user.email}</p>
             </div>

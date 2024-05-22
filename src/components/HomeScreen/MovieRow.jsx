@@ -45,11 +45,13 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
             const videos = response.data.results;
             if (videos.length > 0) {
                 const trailerKey = videos[0].key; // Assuming the first video is the trailer
+                // setIsFetching (false ) 
                 setTrailerUrl(`https://www.youtube.com/embed/${trailerKey}`);
                 // setError('');
             } else {
                 // Handle case when no trailers are available
                 setNoTrailer("Couldn't fetch the movie trailer for this data");
+                setIsFetching(false)
                 // setTrailerUrl('');
             }
         } catch (error) {
@@ -90,7 +92,7 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
                                     handleClick(movie.id);
                                 }
                             }}
-                            src={`https://image.tmdb.org/t/p/w200/${isLargeRow ? movie.poster_path  : movie.backdrop_path}`}
+                            src={`https://image.tmdb.org/t/p/w300/${isLargeRow ? movie.poster_path  : movie.backdrop_path}`}
                             alt={movie.title}
                         />
                         <p className='movie-title bg-red-600'>{movie?.title || movie?.name}</p>

@@ -188,6 +188,7 @@ max-height: 500px;
     position: fixed;
     left: 0;
     top: 20px;
+    /* height: 100vh; */
   }
   .login{
     position: relative;
