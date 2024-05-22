@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Modal = ({handleShowModal}) => {
-    const beer = ''
+
   return (
     <div className='modal-background' onClick={handleShowModal}>
         <div className="modal-content">
