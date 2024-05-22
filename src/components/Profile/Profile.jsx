@@ -34,7 +34,7 @@ const handleShowModal = () => {
             <p>Membership Details</p>
           </div>
           <div className='profile_member'>
-            <p>Member since May 2024</p>
+            <p id='pet'>Member since May 2024</p>
             <div className='plan'>
               <p id="mis">Movie Plan</p>
               <p>Next Payment: Unlimited Subscription</p>
