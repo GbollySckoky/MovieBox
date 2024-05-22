@@ -3,6 +3,7 @@ import axios from '../../api/axios';
 import API_KEY from '../../config';
 import { MdCancel } from "react-icons/md";
 import Fetching from '../reusable/Fetching';
+import { space } from 'postcss/lib/list';
 
 const MovieRow = ({ title, fetchURL, isLargeRow }) => {
     const [movies, setMovies] = useState([]);
@@ -12,7 +13,7 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
     const [isFetching, setIsFetching] = useState(true)
     const [error, setError] = useState(null)
     console.log(cancel);
-    
+    const maxTitleLength = 30;
     const handleCancelClick = () => {
         setNoTrailer('');
         setCancel(!cancel);
@@ -95,11 +96,18 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
                             src={`https://image.tmdb.org/t/p/w300/${isLargeRow ? movie.poster_path  : movie.backdrop_path}`}
                             alt={movie.title}
                         />
-                        <p className='movie-title bg-red-600'>{movie?.title || movie?.name}</p>
+                            <p className='movie-title bg-red-600'>
+                                { (movie?.title || movie?.name)?.length > maxTitleLength 
+                                    ? (movie?.title || movie?.name).slice(0, maxTitleLength) + '...' 
+                                    : movie?.title || movie?.name }
+                            </p>
                     </div>
                 ))}
             </div>
-            {trailerUrl && (
+            {isFetching ? (
+            <span className='bg-red-900'> <Fetching/> </span>
+            ):(
+                trailerUrl && (
                 <div className="trailer_container">
                     <iframe
                         title="movie-trailer"
@@ -110,7 +118,7 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
                         allowFullScreen
                     ></iframe>
                 </div>
-            )}
+            ))}
             {noTrailer && (
                 <div className='trail'>
                     <p className='noTrailer'>{noTrailer}</p>

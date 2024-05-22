@@ -24,7 +24,7 @@ const Login = () => {
                     <h2>Watch anywhere. cancel at anytime.</h2>
                     <p>Ready to watch? Enter your email to create or start membership</p>
             
-                    {/* <div className='input'>
+                    <div className='input'>
                         <form action="">
                             <input type="email" required placeholder='Email Address'/>
                             <button
@@ -33,7 +33,7 @@ const Login = () => {
                                 GET STARTED
                             </button>
                         </form>
-                    </div> */}
+                    </div>
                 </> 
             )}
         </div>
