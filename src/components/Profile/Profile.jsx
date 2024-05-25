@@ -25,7 +25,7 @@ const handleShowModal = () => {
           <div  className='profile_info'>
             <div className='profile_details'>
                 <Avatar id="imgs" alt="Remy Sharp" src={david} />
-                <h2>{user.email}</h2>
+                <p>{user.email}</p>
             </div>
           </div>
           <div className="">
