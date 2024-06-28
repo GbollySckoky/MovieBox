@@ -539,3 +539,6 @@ form > h1 {
   color: white;
   padding-left: 10px;
 }
+.cursor{
+  cursor: pointer;
+}
