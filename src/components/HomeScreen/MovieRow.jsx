@@ -39,7 +39,7 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
         };
         fetchData();
     }, [fetchURL]);
-
+// fetching for vidoes
     const handleClick = async (id) => {
         try {
             const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US&official=true`);
@@ -95,6 +95,7 @@ const MovieRow = ({ title, fetchURL, isLargeRow }) => {
                             }}
                             src={`https://image.tmdb.org/t/p/w300/${isLargeRow ? movie.poster_path  : movie.backdrop_path}`}
                             alt={movie.title}
+                            className='cursor'
                         />
                             <p className='movie-title bg-red-600'>
                                 { (movie?.title || movie?.name)?.length > maxTitleLength 
