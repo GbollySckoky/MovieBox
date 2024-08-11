@@ -1,10 +1,11 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { auth } from '../../firebase' 
-// import {auth} from  '../../firebase'
-const SignIn = () => {
+import { MdOutlineCancel } from "react-icons/md";
+const SignIn = ({handleClick}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [errorMessage, setErrorMessage] = useState(null)
     // console.log(email)
     const register = async (e) => {
         e.preventDefault()
@@ -16,7 +17,10 @@ const SignIn = () => {
              localStorage.setItem('user', JSON.stringify(user))
         }
         catch(err){
-            alert(err.message)
+            setErrorMessage(err.message)
+            setTimeout(() => {
+                setErrorMessage(null);
+            },3000)
         }
     }
 
@@ -32,7 +36,10 @@ const SignIn = () => {
              localStorage.setItem('user', JSON.stringify(user))
         }
         catch(error){
-            alert(error.message)
+           setErrorMessage(error.message)
+           setTimeout(() => {
+            setErrorMessage(null);
+            },3000)
         }
     }
 
@@ -46,6 +53,11 @@ const SignIn = () => {
 
     return (
         <div className='signIn'>
+            <div className="icon-container">
+                <MdOutlineCancel
+                    onClick={handleClick}
+                    className='bg-red-900 w-full cursor-pointer' />
+            </div>
             <form>
                 <h1>Sign In</h1>
                 <div>
@@ -74,6 +86,7 @@ const SignIn = () => {
                     <span className='grey'>New to Netflix?</span>
                     <span className='signIn_link' onClick={register}> Sign Up now.</span>
                 </h4>
+                {errorMessage && <p className='red'>{errorMessage}</p>}
             </form>
         </div>
     )

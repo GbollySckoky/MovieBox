@@ -542,3 +542,13 @@ form > h1 {
 .cursor{
   cursor: pointer;
 }
+.signIn .icon-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 16px; /* Adjust padding as needed */
+  cursor: pointer;
+}
+.red{
+  color: red;
+  padding: 10px 0;
+}
