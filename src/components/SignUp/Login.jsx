@@ -3,6 +3,9 @@ import logo from '../../../src/assets/logo.png'
 import SignIn from './SignIn'
 const Login = () => {
     const [signIn, setSignIn] = useState(false) 
+    const handleClick = () => {
+        setSignIn((prev) => !prev)
+    }
   return (
     <div className='login'>
         <div className='loginScreen'>
@@ -17,7 +20,7 @@ const Login = () => {
         </div>
         <div className="login_body">
             {signIn ? (
-                <SignIn />
+                <SignIn handleClick={handleClick}/>
             ):(
                 <>
                     <h1>Unlimited films, TV programmes and more.</h1>
